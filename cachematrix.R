@@ -1,3 +1,5 @@
+
+# This function creates a matrix and stores the matrix values in the cache
 makeCacheMatrix <- function(a = matrix()) {
   mx <- NULL
   set <- function(b){
@@ -12,6 +14,10 @@ makeCacheMatrix <- function(a = matrix()) {
        getmtx = getmtx)
 }
 
+
+#this function checks whether a similar matrix was set, if so, 
+#the value is taken from the data cache, 
+#otherwise the function calculates the inverse matrix
 cacheSolve <- function(a, ...) {
   mx <- a$getmtx()
   if(!is.null(mx)) {
